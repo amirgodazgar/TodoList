@@ -43,14 +43,34 @@ const Todos = () => {
   };
 
   return (
-    <div class="flex bg-slate-200">
-      <div class="flex-1 bg-slate-300 ">
-        <input type="text" value={text} onChange={textHandler} />
-        {changeBtn ? (
-          <button onClick={changeHandler}>change</button>
-        ) : (
-          <button onClick={addTodoHandler}>Add</button>
-        )}
+    <div class="flex h-full bg-slate-200 ">
+      <div class="w-1/3  mx-auto bg-slate-400 flex-col justify-center items-center overflow-y-auto">
+        <h2 class="flex justify-center items-center my-3 text-lg text-gray-800">
+          TODO
+        </h2>
+        <div class="flex justify-center items-center">
+          <input
+            class="border rounded-sm border-slate-600 h-6 "
+            type="text"
+            value={text}
+            onChange={textHandler}
+          />
+          {changeBtn ? (
+            <button
+              class="bg-slate-300 ml-1 rounded-sm px-2 bg-zinc-800 text-slate-300 h-6"
+              onClick={changeHandler}
+            >
+              CHANGE
+            </button>
+          ) : (
+            <button
+              class="bg-slate-300 ml-1 rounded-sm px-2 bg-zinc-800 text-slate-300 h-6"
+              onClick={addTodoHandler}
+            >
+              ADD
+            </button>
+          )}
+        </div>
 
         {todoList.map((i, index) => (
           <Todo
@@ -64,8 +84,10 @@ const Todos = () => {
         ))}
       </div>
 
-      <div class="flex-1 bg-slate-400">
-        <h3>complete</h3>
+      <div class="w-1/3 mx-auto bg-slate-400 flex justify-center items-start overflow-y-auto">
+        <h2 class="flex justify-center items-center my-3 text-lg text-gray-800">
+          COMPLETE
+        </h2>
         {doneTodos.map((item, index) => (
           <div key={index} style={{ color: "#258111", margin: "0 .5rem" }}>
             {item}
