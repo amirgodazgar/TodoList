@@ -3,25 +3,6 @@ import { add, complete, edit, remove } from "./todoSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Todo from "./Todo";
 
-// const Item = ({ text, remove, id, complete, edit, setId }) => {
-//   const btn = { border: "1px solid #ddd", margin: "0 .5rem" };
-
-//   return (
-//     <div style={{ border: "1px solid #ddd", margin: ".5rem 0" }}>
-//       <p style={{ margin: ".5rem" }}>{text}</p>
-//       <button style={btn} onClick={() => complete(text, id)}>
-//         Done
-//       </button>
-//       <button style={btn} onClick={() => edit(text, id)}>
-//         Edit
-//       </button>
-//       <button style={btn} onClick={() => remove(id)}>
-//         Delete
-//       </button>
-//     </div>
-//   );
-// };
-
 const Todos = () => {
   const [text, setText] = useState("");
   const [changeBtn, setChangeBtn] = useState(false);
@@ -62,8 +43,8 @@ const Todos = () => {
   };
 
   return (
-    <div style={{ display: "flex" }}>
-      <div style={{ margin: "3rem", width: "40%" }}>
+    <div class="flex bg-slate-200">
+      <div class="flex-1 bg-slate-300 ">
         <input type="text" value={text} onChange={textHandler} />
         {changeBtn ? (
           <button onClick={changeHandler}>change</button>
@@ -83,7 +64,7 @@ const Todos = () => {
         ))}
       </div>
 
-      <div style={{ margin: "3rem", width: "40%", border: "1px solid #ddd" }}>
+      <div class="flex-1 bg-slate-400">
         <h3>complete</h3>
         {doneTodos.map((item, index) => (
           <div key={index} style={{ color: "#258111", margin: "0 .5rem" }}>
