@@ -44,27 +44,28 @@ const Todos = () => {
 
   return (
     <div class="flex h-full bg-slate-200 ">
-      <div class="w-1/3  mx-auto bg-slate-400 flex-col justify-center items-center overflow-y-auto">
+      <div class="w-1/3 mx-auto bg-slate-200 flex-col justify-center items-center overflow-y-auto">
         <h2 class="flex justify-center items-center my-3 text-lg text-gray-800">
           TODO
         </h2>
         <div class="flex justify-center items-center">
           <input
-            class="border rounded-sm border-slate-600 h-6 "
+            style={{ outline: "none" }}
+            class="rounded-md border-slate-600 h-8 px-1"
             type="text"
             value={text}
             onChange={textHandler}
           />
           {changeBtn ? (
             <button
-              class="bg-slate-300 ml-1 rounded-sm px-2 bg-zinc-800 text-slate-300 h-6"
+              class="ml-1 px-4 border-solid rounded-md border-2 border-orange-500 bg-gray-600 text-orange-500 h-8"
               onClick={changeHandler}
             >
               CHANGE
             </button>
           ) : (
             <button
-              class="bg-slate-300 ml-1 rounded-sm px-2 bg-zinc-800 text-slate-300 h-6"
+              class="ml-1 px-4 border-solid rounded-md border-2 border-cyan-400 bg-gray-600 text-cyan-400 h-8"
               onClick={addTodoHandler}
             >
               ADD
