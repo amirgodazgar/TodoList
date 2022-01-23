@@ -58,14 +58,19 @@ const Todos = () => {
           />
           {changeBtn ? (
             <button
-              class="ml-1 px-4 border-solid rounded-md border-2 border-orange-500 bg-gray-600 text-orange-500 h-8"
+              class="
+              ml-1 px-4 border-solid rounded-md border-2 border-orange-400 bg-gray-600 text-orange-400 h-8
+              transition-all duration-200 hover:bg-orange-400 hover:text-gray-600 hover:border-gray-600
+              "
               onClick={changeHandler}
             >
               CHANGE
             </button>
           ) : (
             <button
-              class="ml-1 px-4 border-solid rounded-md border-2 border-cyan-400 bg-gray-600 text-cyan-400 h-8"
+              class="ml-1 px-4 border-solid rounded-md border-2 border-cyan-400 bg-gray-600 text-cyan-400 h-8
+              transition-all duration-200 hover:bg-cyan-400 hover:text-gray-600 hover:border-gray-600
+              "
               onClick={addTodoHandler}
             >
               ADD
