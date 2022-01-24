@@ -60,7 +60,7 @@ const Todos = () => {
           {changeBtn ? (
             <button
               class="
-              ml-2 px-4 rounded-md bg-slate-00 drop-shadow-sm border-2 border-slate-300 text-slate-400 h-8 w-1/4
+              ml-2 px-4 rounded-md bg-slate-200 drop-shadow-sm border-2 border-slate-300 text-slate-400 h-8 w-1/4
               transition-all duration-300  hover:border-orange-600/50 hover:drop-shadow-lg hover:text-orange-600
               "
               onClick={changeHandler}
@@ -91,12 +91,15 @@ const Todos = () => {
         ))}
       </div>
 
-      <div class="w-1/2 mx-auto bg-slate-400 flex justify-center items-start overflow-y-auto">
-        <h2 class="flex justify-center items-center my-3 text-lg text-gray-800">
+      <div class="w-1/2 mx-auto bg-slate-300 flex-col justify-center items-start overflow-y-auto">
+        <h2 class="flex justify-center items-center my-3 text-2xl font-semibold font-['Sedgwick_Ave'] text-gray-800">
           COMPLETE
         </h2>
         {doneTodos.map((item, index) => (
-          <div key={index} style={{ color: "#258111", margin: "0 .5rem" }}>
+          <div
+            key={index}
+            class="flex justify-center items-center tracking-wider font-medium font-['Sedgwick_Ave'] bg-slate-200 text-lime-600 rounded w-1/3 mx-auto my-2 p-1"
+          >
             {item}
           </div>
         ))}
