@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { add, complete, edit, remove } from "./todoSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Todo from "./Todo";
+import { buttonIcon } from './../../assets/icons/icons';
 
 const Todos = () => {
   const [text, setText] = useState("");
@@ -68,12 +69,12 @@ const Todos = () => {
             </button>
           ) : (
             <button
-              class="ml-1 px-4 border-solid rounded-md border-2 border-cyan-400 bg-gray-600 text-cyan-400 h-8
-              transition-all duration-200 hover:bg-cyan-400 hover:text-gray-600 hover:border-gray-600
+              class="ml-1 px-4 rounded-md   bg-slate-00 drop-shadow-sm border-2 border-slate-300 h-8
+              transition-all duration-300  hover:border-lime-600/50 hover:drop-shadow-lg 
               "
               onClick={addTodoHandler}
             >
-              ADD
+             {buttonIcon.add}
             </button>
           )}
         </div>
