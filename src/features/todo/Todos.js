@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { add, complete, edit, remove } from "./todoSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Todo from "./Todo";
-import { buttonIcon } from './../../assets/icons/icons';
+import { buttonIcon } from "./../../assets/icons/icons";
 
 const Todos = () => {
   const [text, setText] = useState("");
@@ -45,7 +45,7 @@ const Todos = () => {
 
   return (
     <div class="flex h-full bg-slate-200 ">
-      <div class="w-1/3 mx-auto bg-slate-200 flex-col justify-center items-center overflow-y-auto">
+      <div class="w-1/2 mx-auto bg-slate-200 flex-col justify-center items-center overflow-y-auto">
         <h2 class="flex justify-center items-center my-3 text-lg text-gray-800">
           TODO
         </h2>
@@ -60,8 +60,8 @@ const Todos = () => {
           {changeBtn ? (
             <button
               class="
-              ml-1 px-4 border-solid rounded-md border-2 border-orange-400 bg-gray-600 text-orange-400 h-8
-              transition-all duration-200 hover:bg-orange-400 hover:text-gray-600 hover:border-gray-600
+              ml-2 px-4 rounded-md bg-slate-00 drop-shadow-sm border-2 border-slate-300 text-slate-400 h-8
+              transition-all duration-300  hover:border-orange-600/50 hover:drop-shadow-lg hover:text-orange-600
               "
               onClick={changeHandler}
             >
@@ -69,12 +69,12 @@ const Todos = () => {
             </button>
           ) : (
             <button
-              class="ml-1 px-4 rounded-md   bg-slate-00 drop-shadow-sm border-2 border-slate-300 h-8
+              class="ml-2 px-4 rounded-md bg-slate-00 drop-shadow-sm border-2 border-slate-300 h-8
               transition-all duration-300  hover:border-lime-600/50 hover:drop-shadow-lg 
               "
               onClick={addTodoHandler}
             >
-             {buttonIcon.add}
+              {buttonIcon.add}
             </button>
           )}
         </div>
@@ -91,7 +91,7 @@ const Todos = () => {
         ))}
       </div>
 
-      <div class="w-1/3 mx-auto bg-slate-400 flex justify-center items-start overflow-y-auto">
+      <div class="w-1/2 mx-auto bg-slate-400 flex justify-center items-start overflow-y-auto">
         <h2 class="flex justify-center items-center my-3 text-lg text-gray-800">
           COMPLETE
         </h2>
