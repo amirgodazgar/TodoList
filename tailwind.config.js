@@ -2,6 +2,10 @@ module.exports = {
   content: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx,vue}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Graphik', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+      },
       colors: {
         orangeBtn: {
           primary: "#ffe53b",

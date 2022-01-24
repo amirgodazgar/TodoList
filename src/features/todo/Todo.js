@@ -4,7 +4,9 @@ import { buttonIcon } from "./../../assets/icons/icons";
 const Todo = ({ text, remove, id, complete, edit }) => {
   return (
     <div class="flex justify-between items-center py-2 px-2 bg-slate-300 drop-shadow-lg w-1/2 rounded my-4 m-auto">
-      <p class="flex-1 text-slate-600 font-medium truncate ml-2">{text}</p>
+      <p class="flex-1 text-slate-600 truncate tracking-wider font-medium font-['Sedgwick_Ave'] ml-2">
+        {text}
+      </p>
       <div class="flex-2">
         <button
           class="rounded-full border-2 border-slate-300 w-9 h-9 mx-1

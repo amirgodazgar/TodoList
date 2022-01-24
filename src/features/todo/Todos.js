@@ -46,13 +46,13 @@ const Todos = () => {
   return (
     <div class="flex h-full bg-slate-200 ">
       <div class="w-1/2 mx-auto bg-slate-200 flex-col justify-center items-center overflow-y-auto">
-        <h2 class="flex justify-center items-center my-3 text-lg text-gray-800">
-          TODO
+        <h2 class="flex justify-center items-center my-3 text-2xl font-semibold font-['Sedgwick_Ave'] text-gray-800">
+          My TodoList
         </h2>
-        <div class="flex justify-center items-center">
+        <div class="flex justify-center items-center w-3/6 mx-auto">
           <input
             style={{ outline: "none" }}
-            class="rounded-md border-slate-600 h-8 px-1"
+            class="rounded-md border-slate-600 h-8 w-2/3 px-1"
             type="text"
             value={text}
             onChange={textHandler}
@@ -60,7 +60,7 @@ const Todos = () => {
           {changeBtn ? (
             <button
               class="
-              ml-2 px-4 rounded-md bg-slate-00 drop-shadow-sm border-2 border-slate-300 text-slate-400 h-8
+              ml-2 px-4 rounded-md bg-slate-00 drop-shadow-sm border-2 border-slate-300 text-slate-400 h-8 w-1/4
               transition-all duration-300  hover:border-orange-600/50 hover:drop-shadow-lg hover:text-orange-600
               "
               onClick={changeHandler}
@@ -69,7 +69,7 @@ const Todos = () => {
             </button>
           ) : (
             <button
-              class="ml-2 px-4 rounded-md bg-slate-00 drop-shadow-sm border-2 border-slate-300 h-8
+              class="ml-2 px-4 rounded-md bg-slate-00 drop-shadow-sm border-2 border-slate-300 h-8 w-1/6
               transition-all duration-300  hover:border-lime-600/50 hover:drop-shadow-lg 
               "
               onClick={addTodoHandler}
