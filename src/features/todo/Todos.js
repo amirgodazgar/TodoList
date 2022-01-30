@@ -102,7 +102,7 @@ const Todos = () => {
       </div>
 
       <div
-        class="sm:w-full lg:w-1/2 mx-auto pt-10 bg-slate-300 flex-col justify-center items-start overflow-y-auto
+        class="sm:w-full lg:w-1/2 mx-auto pt-10 pb-5 bg-slate-300 flex-col justify-center items-start overflow-y-auto
        dark:bg-slate-800
       "
       >
