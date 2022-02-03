@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Todo from "./Todo";
 import { buttonIcon } from "./../../assets/icons/icons";
 
-const Todos = () => {
+const Todos = ({ light, dark }) => {
   const [text, setText] = useState("");
   const [changeBtn, setChangeBtn] = useState(false);
   const [id, setId] = useState("");
@@ -50,10 +50,18 @@ const Todos = () => {
       dark:bg-slate-700
       "
       >
+        <div class="flex justify-end items-center mr-3">
+          <span
+            onClick={dark}
+            class="rounded-full border-2 border-slate-900 p-1 cursor-pointer"
+          >
+            {buttonIcon.dark}
+          </span>
+        </div>
         <h2
           class="flex justify-center items-center my-3 text-2xl font-semibold font-['Sedgwick_Ave'] text-gray-800
-        dark:text-slate-200
-        "
+          dark:text-slate-200
+          "
         >
           My TodoList
         </h2>
@@ -103,13 +111,21 @@ const Todos = () => {
 
       <div
         class="sm:w-full lg:w-1/2 mx-auto pt-10 pb-5 bg-slate-300 flex-col justify-center items-start overflow-y-auto
-       dark:bg-slate-800
-      "
+        dark:bg-slate-800
+        "
       >
+        <div class="flex justify-start items-center ml-3">
+          <span
+            onClick={light}
+            class="rounded-full border-2 border-slate-400 p-1 cursor-pointer"
+          >
+            {buttonIcon.light}
+          </span>
+        </div>
         <h2
           class="flex justify-center items-center my-3 text-2xl font-semibold font-['Sedgwick_Ave'] text-gray-800
-        dark:text-slate-200
-        "
+          dark:text-slate-200
+          "
         >
           COMPLETE
         </h2>
