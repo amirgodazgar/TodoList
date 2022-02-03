@@ -50,7 +50,7 @@ const Todos = ({ light, dark }) => {
       dark:bg-slate-700
       "
       >
-        <div class="flex justify-end items-center mr-3">
+        <div class="flex justify-end items-center mx-3">
           <span
             onClick={dark}
             class="rounded-full border-2 border-slate-900 p-1 cursor-pointer"
@@ -114,10 +114,10 @@ const Todos = ({ light, dark }) => {
         dark:bg-slate-800
         "
       >
-        <div class="flex justify-start items-center ml-3">
+        <div class="flex justify-end items-center mx-3 lg:justify-start">
           <span
             onClick={light}
-            class="rounded-full border-2 border-slate-400 p-1 cursor-pointer"
+            class="rounded-full border-2 border-slate-400 p-1 cursor-pointer "
           >
             {buttonIcon.light}
           </span>
